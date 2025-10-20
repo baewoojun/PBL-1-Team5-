@@ -31,6 +31,7 @@ public LibDB<User> setUserDB(String userFile) {
         for ( ; scan.hasNextLine() ; ){
             String line = scan.nextLine();
             if (line.isEmpty()) continue;
+            // "/"로 단어 구분, 토큰화 진행
             String[] token = line.split("/");
             if (token.length >= 2) {
                 int id = Integer.parseInt(token[0]);
@@ -69,13 +70,12 @@ public LibDB<Book> setBookDB(String bookFile) {
             bookDB.addElement(b);
         }
     }
-} catch (IOException e){
-    System.out.println("입출력 오류: " + e.getMessage());
+    } catch (IOException e){
+System.out.println("입출력 오류: " + e.getMessage());
 }
 return bookDB;
 }
         
-
 //printDB: 데이터베이스 출력
 public <T extends DB_Element> void printDB(LibDB<T> db) {
     ArrayList<T> list = db.getAllElements();  

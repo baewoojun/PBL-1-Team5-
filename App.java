@@ -26,22 +26,22 @@ public class App
         // lbMS.printLoanList();
         LibraryManagementSystem lbMS = new LibraryManagementSystem();
 
-        // 1️⃣ User DB 설정
+        //1 User DB 설정
         System.out.println("----- 이용자 목록 출력 -----");
         lbMS.setUserDB("UserData2025.txt");
         lbMS.printDB(lbMS.userDB);  // 중복 setUserDB 제거
 
-        // 2️⃣ Book DB 설정
+        //2 Book DB 설정
         System.out.println("\n----- 책 목록 출력 -----");
         lbMS.setBookDB("BookData2025.txt");
         lbMS.printDB(lbMS.bookDB);
 
-        // 3️⃣ 책 대출
+        //3 책 대출
         lbMS.borrowBook("2023320003", "B04");
         lbMS.borrowBook("2025320001", "B02");
         lbMS.borrowBook("2024320002", "B03");
 
-        // 4️⃣ 대출 현황 출력
+        //4 대출 현황 출력
         lbMS.printLoanList();
     }
 }

@@ -8,7 +8,6 @@ import java.io.*;
  * @author (2022320035_배우준) 
  * @version (25.10.20)
  */
-
 public class LibraryManagementSystem
 {
     LibDB<Book> bookDB;
@@ -40,10 +39,10 @@ public class LibraryManagementSystem
                     userDB.addElement(u);
                 }
             }
-
-            scan.close();
-            fr.close();
+            scan.close();//입력 스트림이 끝나면 반드시 Close 하기
+            fr.close();//입력 스트림이 끝나면 반드시 Close 하기
         } 
+        //예외 상황 출력
         catch (IOException e) {
             System.out.println("입출력 오류: " + e.getMessage());
         }
@@ -70,10 +69,10 @@ public class LibraryManagementSystem
                     bookDB.addElement(b);
                 }
             }
-
-            scan.close();
-            fr.close();
+            scan.close();//입력 스트림이 끝나면 반드시 Close 하기
+            fr.close();//입력 스트림이 끝나면 반드시 Close 하기
         } 
+        //예외 상황 출력
         catch (IOException e) {
             System.out.println("입출력 오류: " + e.getMessage());
         }

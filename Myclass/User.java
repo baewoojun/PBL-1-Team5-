@@ -22,7 +22,7 @@ public class User extends DB_Element
         return stID.toString();
     }
 
-    //오버라이딩(name 리턴)
+    //오버라이딩(stID, name 리턴)
     public String toString()
     {
         return "[" + stID + "]" + "(" + name + ")";

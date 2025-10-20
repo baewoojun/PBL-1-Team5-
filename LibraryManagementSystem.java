@@ -24,7 +24,7 @@ public LibraryManagementSystem() {
 //setUserDB: Temp 파일에서 UserData2025.txt 데이터 읽어 DB 저장
 public LibDB<User> setUserDB(String userFile) {
     try {
-        //1 .txt파일 입력 스트림으로 입력
+        // .txt파일을 입력 스트림으로 입력 받는 작업
         FileReader fr = new FileReader("C:\\Temp\\UserData2025.txt");
         Scanner scan = new Scanner(fr);
 

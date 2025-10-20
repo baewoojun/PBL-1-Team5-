@@ -5,8 +5,7 @@ package Myclass;
  * @author (2022320035_배우준) 
  * @version (25.10.20)
  */
-public class Book extends DB_Element
-{
+public class Book extends DB_Element{
     private String author;
     private String BookID;
     private String publisher;

@@ -22,9 +22,9 @@ public class App
         lbMS.printDB(lbMS.bookDB);//bookDB 데이터 출력
 
         //3 책 대출(요구사항 : borrowBook 3번 실행)
-        lbMS.borrowBook("2025320001", "B02");
         lbMS.borrowBook("2024320002", "B03");
         lbMS.borrowBook("2023320003", "B04");
+        lbMS.borrowBook("2025320001", "B02");
         
         //4 대출 현황 출력 (사용자 화면에 출력)
         lbMS.printLoanList();

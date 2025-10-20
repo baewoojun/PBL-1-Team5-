@@ -2,12 +2,11 @@ package DataBase;
 import Myclass.*;
 import java.util.ArrayList;
 import java.util.Iterator;
-
 /**
  * 여기에 LibDB 클래스 설명을 작성하십시오.
- * 
- * @author (작성자 이름) 
- * @version (버전번호나 날짜)
+ * 제네릭 클래스로 생성, 반복 작업을 위한 Iterator, for each문 사용
+ * @author (2022320035)_배우준) 
+ * @version (25.10.20)
  */
 public class LibDB<T extends DB_Element>
 {

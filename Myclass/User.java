@@ -1,11 +1,9 @@
 package Myclass;
-
-
 /**
  * 여기에 User 클래스 설명을 작성하십시오.
- * 
- * @author (작성자 이름) 
- * @version (버전번호나 날짜)
+ * String 타입으로 User naem, Id 속성 생성
+ * @author (2022320035_배우준) 
+ * @version (25.10.20)
  */
 public class User extends DB_Element
 {
@@ -24,9 +22,9 @@ public class User extends DB_Element
         return stID.toString();
     }
 
-    //오버라이딩 과정 ()
+    //오버라이딩(name 리턴)
     public String toString()
     {
-        return"(" + name + ")" ;
+        return "[" + stID + "]" + "(" + name + ")";
     }
-}
+} 

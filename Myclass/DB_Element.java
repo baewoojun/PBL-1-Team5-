@@ -1,6 +1,4 @@
 package Myclass;
-
-
 /**
  * 여기에 DB_Element 클래스 설명을 작성하십시오.
  * 

@@ -84,18 +84,22 @@ public class LibraryManagementSystem
         ArrayList<T> list = db.getAllElements();  
         // LibDB 내부에 public getAllElements() 추가 필요
 
-        if (list.size() == 0) return;
+        // if (list.size() == 0) return;
+        
+        // if (list.get(0) instanceof User) {
+            // for (int i = 0; i < list.size(); i++) {
+                // User u = (User) list.get(i);
+                // System.out.println("[" + u.getID() + "] " + u.toString());
+            // }
+        // } 
+        // else if (list.get(0) instanceof Book) {
+            // for (int i = 0; i < list.size(); i++) {
+                // System.out.println(list.get(i).toString());
+            // }
+        // }if (list.isEmpty()) return;
 
-        if (list.get(0) instanceof User) {
-            for (int i = 0; i < list.size(); i++) {
-                User u = (User) list.get(i);
-                System.out.println("[" + u.getID() + "] " + u.toString());
-            }
-        } 
-        else if (list.get(0) instanceof Book) {
-            for (int i = 0; i < list.size(); i++) {
-                System.out.println(list.get(i).toString());
-            }
+        for (T element : list) {
+        System.out.println(element.toString());
         }
     }
 

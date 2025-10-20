@@ -1,11 +1,9 @@
 package Myclass;
-
-
 /**
  * 여기에 Book 클래스 설명을 작성하십시오.
- * 
- * @author (작성자 이름) 
- * @version (버전번호나 날짜)
+ * String 형식으로 BookID, title, author, publihser 속성 생성 
+ * @author (2022320035_배우준) 
+ * @version (25.10.20)
  */
 public class Book extends DB_Element
 {
@@ -14,7 +12,6 @@ public class Book extends DB_Element
     private String publisher;
     private String title;
     private int year;
-    
     //컨스트럭터 생성 (파라메터 5개)
     public Book(String BookID, String title, String author, String publisher,
     int year)
@@ -32,7 +29,7 @@ public class Book extends DB_Element
         return BookID;
     }
 
-    //오버라이딩 과정 ()
+    //오버라이딩 과정 (BookId, title, author, publisher,year)
     public String toString()
     {
         return"(" + BookID + ")"+ title+"," + author+","+publisher+","+ year;

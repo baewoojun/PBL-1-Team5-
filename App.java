@@ -17,7 +17,7 @@ public class App
         lbMS.printDB(lbMS.userDB);//userDB 데이터 출력 
 
         //2 Book DB 설정
-        System.out.println("----- 책 목록 출력 -----");
+        System.out.println("\n----- 책 목록 출력 -----");
         lbMS.setBookDB("BookData2025.txt");
         lbMS.printDB(lbMS.bookDB);//bookDB 데이터 출력
 

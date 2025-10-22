@@ -31,6 +31,6 @@ public class Book extends DB_Element{
     //오버라이딩 과정 (BookId, title, author, publisher,year 리턴)
     public String toString()
     {
-        return"(" + BookID + ")"+ title +"," + author +","+ publisher +","+ year;
+        return"("+BookID+")"+ title +"," + author +","+ publisher +","+ year;
     }
 }

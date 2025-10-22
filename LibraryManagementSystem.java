@@ -40,7 +40,6 @@ public class LibraryManagementSystem{
                     userDB.addElement(u);
                 }
             }
-            scan.close();//입력 스트림이 끝나면 반드시 Close 하기
             fr.close();//입력 스트림이 끝나면 반드시 Close 하기
         } 
         //예외 상황 출력
@@ -69,6 +68,7 @@ public class LibraryManagementSystem{
                 bookDB.addElement(b);
             }
         }
+        fr.close();//입력 스트림이 끝나면 반드시 Close 하기
         } catch (IOException e){
     System.out.println("입출력 오류: " + e.getMessage());
     }
@@ -88,9 +88,11 @@ public class LibraryManagementSystem{
         ArrayList<User> uList = userDB.getAllElements();
         ArrayList<Book> bList = bookDB.getAllElements();
         
+        //founUser, foundBook에 null값 저장
         User foundUser = null;
         Book foundBook = null;
-    
+        
+        //for each문을 사용 user DB에 저장된 값을 순회화며 저장
         for (User u : userDB.getAllElements())
             if (u.getID().equals(userID)){
             foundUser = u; break;}
@@ -107,7 +109,7 @@ public class LibraryManagementSystem{
     
     //printLoanList: 대출 현황 출력
     public void printLoanList() {
-        System.out.println("----- 대출 현황 -----");
+        System.out.println("\n----- 대출 현황 -----");
         for (User u : loanDB.keySet()) {
             Book b = loanDB.get(u);
             //user + book Data 화면에 출력
